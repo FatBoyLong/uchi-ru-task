@@ -60,7 +60,9 @@ function CatsMain() {
     <div className=" m-auto grid max-w-7xl grid-cols-1 gap-10 pt-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
       {fetching && catsList.length === 0 && (
         <div className="col-span-1 text-center sm:col-span-1 md:col-span-2 lg:col-span-3 xl:col-span-4 2xl:col-span-5">
-          <p className="text-center text-gray-700">...загружаем котиков...</p>
+          <p className="animate-spin text-center text-gray-700 text-6xl">
+            😻
+          </p>
         </div>
       )}
       {catsList.map((el) => (
