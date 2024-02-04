@@ -70,7 +70,7 @@ function CatsMain() {
       ))}
       {fetching && catsList.length > 0 && (
         <div className="col-span-1 text-center sm:col-span-1 md:col-span-2 lg:col-span-3 xl:col-span-4 2xl:col-span-5">
-          <p className="text-center text-gray-700">
+          <p className="text-center text-gray-700 p-3">
             ...загружаем еще котиков...
           </p>
         </div>
