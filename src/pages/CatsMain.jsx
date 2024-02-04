@@ -60,17 +60,16 @@ function CatsMain() {
     <div className=" m-auto grid max-w-7xl grid-cols-1 gap-10 pt-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
       {fetching && catsList.length === 0 && (
         <div className="col-span-1 text-center sm:col-span-1 md:col-span-2 lg:col-span-3 xl:col-span-4 2xl:col-span-5">
-          <p className="animate-spin text-center text-gray-700 text-6xl">
-            😻
-          </p>
+          <p className="animate-spin text-center text-6xl text-gray-700">😻</p>
         </div>
       )}
-      {catsList.map((el) => (
-        <CatCard cat={el} key={el.id} />
-      ))}
+      {catsList.map((el) => {
+        const key = el.id + Math.floor(Math.random() * 10);
+        return <CatCard cat={el} key={key} />;
+      })}
       {fetching && catsList.length > 0 && (
         <div className="col-span-1 text-center sm:col-span-1 md:col-span-2 lg:col-span-3 xl:col-span-4 2xl:col-span-5">
-          <p className="text-center text-gray-700 p-3">
+          <p className="p-3 text-center text-gray-700">
             ...загружаем еще котиков...
           </p>
         </div>
